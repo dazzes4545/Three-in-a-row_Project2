@@ -9,7 +9,16 @@
             <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
 
-        
+        <StackPanel Grid.Row="0" Orientation="Horizontal" HorizontalAlignment="Center" Margin="10">
+            <TextBlock Text="Цель: " FontSize="18" VerticalAlignment="Center"/>
+            <TextBlock x:Name="TargetScoreText" Text="100" FontSize="18" FontWeight="Bold" 
+                       Foreground="Blue" VerticalAlignment="Center" Margin="5,0,20,0"/>
+            <TextBlock Text="Очки: " FontSize="18" VerticalAlignment="Center"/>
+            <TextBlock x:Name="ScoreText" Text="0" FontSize="18" FontWeight="Bold" 
+                       VerticalAlignment="Center" Margin="5,0,20,0"/>
+            <Button x:Name="RestartButton" Content="Новая игра" 
+                    FontSize="14" Padding="10,5" Click="RestartButton_Click"/>
+        </StackPanel>
 
         <Canvas x:Name="GameCanvas" Grid.Row="1" Background="#FFF0F0F0" 
                 MouseDown="GameCanvas_MouseDown"/>
